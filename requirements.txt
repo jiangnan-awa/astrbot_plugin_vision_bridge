@@ -1,1 +1,17 @@
-# 本插件仅使用 AstrBot 自带 API，无需额外第三方依赖。
+# P0 优化：OCR 文本提取
+paddleocr>=2.7.0
+paddlepaddle>=2.5.0
+
+# P1 优化：网络搜索
+duckduckgo-search>=4.0.0
+
+# P1 优化：向量知识库
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# P1 优化：图像处理
+Pillow>=10.0.0
+requests>=2.31.0
+
+# P1 优化：游戏数据库 API
+aiohttp>=3.9.0

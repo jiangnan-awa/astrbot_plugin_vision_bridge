@@ -30,5 +30,47 @@
     "default": "prompt",
     "options": ["prompt", "system_prompt"],
     "hint": "prompt：注入用户消息，会随本轮写入历史，支持后续追问；system_prompt：注入系统提示，仅本轮生效、不写入历史。"
+  },
+  "enable_ocr": {
+    "description": "启用 OCR 文本提取",
+    "type": "bool",
+    "default": true,
+    "hint": "在视觉模型分析前先提取图片中的文字，提升新游戏/APP名称识别准确率。"
+  },
+  "enable_web_search": {
+    "description": "启用网络搜索验证",
+    "type": "bool",
+    "default": true,
+    "hint": "当识别到新内容时自动搜索验证，覆盖2024-2026年发布的游戏/角色/APP。"
+  },
+  "enable_knowledge_base": {
+    "description": "启用本地知识库",
+    "type": "bool",
+    "default": true,
+    "hint": "存储用户反馈的正确识别结果，实现'越用越准'的自学习机制。"
+  },
+  "confidence_threshold": {
+    "description": "置信度阈值",
+    "type": "float",
+    "default": 0.7,
+    "hint": "低于此阈值的识别结果会触发搜索验证。范围：0.0-1.0"
+  },
+  "max_search_results": {
+    "description": "最大搜索结果数",
+    "type": "int",
+    "default": 3,
+    "hint": "网络搜索时获取的结果数量，建议2-5条。"
+  },
+  "kb_similarity_threshold": {
+    "description": "知识库相似度阈值",
+    "type": "float",
+    "default": 0.85,
+    "hint": "图片相似度超过此阈值时直接使用知识库结果。范围：0.0-1.0"
+  },
+  "enable_game_api": {
+    "description": "启用游戏数据库API",
+    "type": "bool",
+    "default": true,
+    "hint": "集成RAWG等游戏数据库，提供专业的游戏信息验证。"
   }
 }
