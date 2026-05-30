@@ -1,0 +1,33 @@
+{
+  "vision_provider_id": {
+    "description": "视觉模型提供商 ID",
+    "type": "string",
+    "default": "",
+    "hint": "在 AstrBot「服务提供商」中创建一个多模态/视觉模型，在此处选择模型。留空插件不会工作。"
+  },
+  "vision_instruction": {
+    "description": "追加给视觉模型的系统指令",
+    "type": "text",
+    "default": "你是图像理解助手。请结合上面的对话历史与用户的问题，仔细观察图片，给出准确、详尽且切题的分析与回答。若图片中包含文字，请尽量原样转述。只需输出对图片的理解内容，不要替用户做最终决策式的客套结尾。",
+    "hint": "引导视觉模型产出有针对性的回答而非泛泛描述。会追加在转发的人设之后。"
+  },
+  "forward_persona": {
+    "description": "把主对话人设转发给视觉模型",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，视觉模型会沿用主对话的人设（system_prompt），回答口吻更一致。"
+  },
+  "forward_history": {
+    "description": "把对话历史转发给视觉模型",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后，视觉模型能看到完整对话历史，理解更贴合上下文（例如承接前文的追问）。"
+  },
+  "inject_mode": {
+    "description": "视觉理解结果的注入方式",
+    "type": "string",
+    "default": "prompt",
+    "options": ["prompt", "system_prompt"],
+    "hint": "prompt：注入用户消息，会随本轮写入历史，支持后续追问；system_prompt：注入系统提示，仅本轮生效、不写入历史。"
+  }
+}

@@ -1,0 +1,8 @@
+name: astrbot_plugin_vision_bridge
+desc: >-
+  为非多模态 LLM 桥接视觉理解能力。仅在用户消息中检测到图片时，把发往主 LLM 的完整请求
+  （人设 + 对话历史 + 用户问题 + 图片）转发给多模态视觉模型，得到有针对性的理解后注入上下文，
+  再交给主 LLM 产出最终回复；纯文本对话不会触发视觉模型。
+version: v2.0.0
+author: jiangnan-awa
+repo: https://github.com/jiangnan-awa/astrbot_plugin_vision_bridge
