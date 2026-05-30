@@ -1,9 +1,10 @@
 {
   "vision_provider_id": {
-    "description": "视觉模型提供商 ID",
+    "description": "视觉模型提供商",
     "type": "string",
     "default": "",
-    "hint": "在 AstrBot「服务提供商」中创建一个多模态/视觉模型，在此处选择模型。留空插件不会工作。"
+    "_special": "select_provider",
+    "hint": "直接选择一个多模态/视觉模型（如 GPT-4o、qwen-vl、gemini 等）。需先在「服务提供商」中创建好。留空插件不会工作。"
   },
   "vision_instruction": {
     "description": "追加给视觉模型的系统指令",
